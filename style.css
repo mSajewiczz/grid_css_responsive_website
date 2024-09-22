@@ -8,6 +8,10 @@ body {
     font-family: sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     display: grid;
 }
@@ -73,6 +77,10 @@ main {
     grid-template-columns: 1fr 2fr;
 }
 
+main p {
+    font-size: 16px;
+}
+
 /* settings for boths - aside and main */
 
 #aside, #main-part {
@@ -94,9 +102,12 @@ main {
     background-color: #f1f1f1;
 }
 
-#aside .aside-first, #aside .aside-second {
+.aside-first, .aside-second {
     display: grid;
-} 
+    height: 50%;
+    gap: 30px;
+}
+
 
 .aside-up-img, .aside-bottom-img, .main-up-img {
     padding: 20px;
@@ -117,6 +128,9 @@ main {
     background-color: white;
 }
 
+.blog-second-part {
+    margin-top: 60px;
+}
 
 footer {
     display: grid;
@@ -124,6 +138,29 @@ footer {
     height: 100px;
     background-color: #DDD;
     color: #000;
+}
+
+#contact {
+    display: grid;
+    place-content: center;
+    margin-top: 50px;
+    height: 100%;
+    gap: 30px;
+}
+
+#contact h1 {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.contact-info i, .contact-info span {
+    color: red;
+}
+
+.contact-info i {
+    padding: 10px;
 }
 
 @media(max-width: 700px) {
@@ -142,9 +179,18 @@ footer {
 
     .nav-element {
         display: grid;
-        padding: 5px;
+        padding: 15px;
         place-items: center;
         width: 100%;
+    }
+
+    main  {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .blog-first-part, .blog-second-part {
+        margin-top: 30px;
     }
     
 }
